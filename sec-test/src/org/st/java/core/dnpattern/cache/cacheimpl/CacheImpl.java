@@ -18,6 +18,7 @@ public abstract class CacheImpl<K, V> implements Cache<K, V> {
     private final ReadWriteLock lock      = new ReentrantReadWriteLock();
     private final Lock          readLock  = lock.readLock();
     private final Lock          writeLock = lock.writeLock();
+    String                      a;
     
     public CacheImpl(String name) {
         this.name = name;
